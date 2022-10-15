@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 85px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000b22e3;
+    transition: 0.5s;
+    overflow-x: hidden;
+    padding-top: 15px;
+    white-space: nowrap;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 19px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  main .sidebar {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .material-icons,
+  .icon-text {
+    vertical-align: middle;
+  }
+  
+  .material-icons {
+    padding-bottom: 3px;
+    margin-right: 30px;
+  }
+  
+  #main {
+    padding: 16px;
+    margin-left: 85px;
+    transition: margin-left 0.5s;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+    .sidebar a {
+      font-size: 18px;
+    }
+  }
+
+  .main h2{color: #818181;
+    margin-top: -6px;
+    margin-left: 231px;
+  }
+.selschema {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+select{font-size: 20px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+}
+input[type="submit"]{
+  background-color: #4267B2;
+  border: 1px solid rgb(171, 125, 125);
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 8px;
+  cursor: pointer;
+  width:100%;
+}
+
+.subm:hover{
+  background-color: #041f55;
+  color:white ;
+  
+
+}
+
+/* ---------------------form ---------------------------------------------------- */
+
+
+.container{ margin-top: 50px;
+  background-color: #f2f2f258;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+select,
+textarea{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+fieldset{
+  background-color: rgba(255, 255, 255, 0.571);
+  border: 1px solid #ccc;
+}
+
+.mainheading{
+  text-align: center;
+}
+
+.subm{
+  background-color: #845252;
+  border: 1px solid rgb(171, 125, 125);
+  color: white;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  width:100%;
+}
+
+.subm:hover{
+  background-color: #1f0c0c;
+  color:white ;
+  
+
+}
+/* ------------------------------------------------------------------------------- */
+
+  
+    </style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+        <div style="margin-bottom: -9px;">
+        <a href="#"><img style="height: 23px;width:29px;margin-right: 29px;margin-left: -2px;" src="acclogo.png" alt=""><span><span  style="margin-top: 0px;" class="icon-text">Account</a></span><br>
+        </div>
+        <div style="margin-bottom: -9px;">
+          <a href="#"><img style="height: 23px;width:29px;margin-right: 29px;margin-left: -2px;" src="acclogo.png" alt=""><span><span  style="margin-top: 0px;" class="icon-text">Schema</a></span><br>
+          </div>
+          <div style="margin-bottom: -9px;">
+            <a href="#"><img style="height: 23px;width:29px;margin-right: 29px;margin-left: -2px;" src="acclogo.png" alt=""><span><span  style="margin-top: 0px;" class="icon-text">Account Info</a></span><br>
+            </div>
+            <div style="margin-bottom: -9px;">
+              <a href="#"><img style="height: 23px;width:29px;margin-right: 29px;margin-left: -2px;" src="acclogo.png" alt=""><span><span  style="margin-top: 0px;" class="icon-text">Contact Us</a></span><br>
+              </div>
+      </div>
+      
+      <div id="main" class="main"  >
+        <h2>GUJARAT UNRESERVED EDUCATIONAL & ECONOMICAL DEVELOPMENT CORPORATION </h2>
+       
+          <div class="selschema">
+              <p style="font-size: 20px;" id="f1">Schema Type:
+                *<select name="schema_type" id="schema_type" required>
+                    <option value="">--Select Schema Type--</option>
+                    <option value="Schema10">Schema After 10th</option>
+                    <option value="Loan Schema">Loan Schema</option>
+                    <option value="Schema After 12th">Schema After 12th</option>
+                </select>
+              </p>  
+           <button name="submit" id="submit" class="subm" onclick="check(); return false"> SUBMIT </button>
+          </div>
+     
+      <div id='new-form'> 
+
+      </div>
+      <h2 style="color:#0e0d0d;
+      margin-top: 21px;
+      margin-left: 267px;">   Congratulation you are eligible. </h2>
+      </div>
+      
+</body>
+<script>
+    var mini = true;
+
+function toggleSidebar() {
+  if (mini) {
+    console.log("opening sidebar");
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    this.mini = false;
+  } else {
+    console.log("closing sidebar");
+    document.getElementById("mySidebar").style.width = "85px";
+    document.getElementById("main").style.marginLeft = "85px";
+    this.mini = true;
+  }
+}
+
+htmlDataFrom = `<div class="container">
+<form action="" name="eliform">
+    <h1 class="mainheading">Eligibility Form</h1><hr>
+    <p>Required Fields are followed by * </p>
+    <p  styid="f1">Cast Category:
+                *<select style="font-size:14px" name="category_type" id="category_type" required>
+                    <option value="">--Category Type--</option>
+                    <option value="general">GENERAL</option>
+                    <option value="obc">O.B.C.</option>
+                    <option value="st">S.T.</option>
+                    <option value="sc">S.C.</option>
+                </select>
+    </p>
+    <fieldset> 
+        <legend>Gender *</legend>
+        <p>
+            Male <input type="radio" name="gender" id="Male" required>
+            Female <input type="radio" name="gender" id="Female" required>
+        </p>
+    </fieldset>
+    <fieldset name="studyi" id="studyi"> 
+        <legend>Now Study in *</legend>
+        <p>
+            11th <input type="radio" name="studyin" id="10th" required value="11s">
+            12th <input type="radio" name="studyin" id="12th" required value="12s">
+            College <input type="radio" name="studyin" id="clg" required>
+        </p>
+    </fieldset>
+    <fieldset> 
+        <legend>Percentge(%) in 10th *</legend>
+        <p>
+            70 % or more  <input type="radio" name="perc" id="4.4" required>
+            Less than 70 % <input type="radio" name="perc" id="4.6" required>
+        </p>
+    </fieldset>
+    <fieldset> 
+        <legend>Family Income *</legend>
+        <p>
+            Less than 4.50 lakhs <input type="radio" name="income" id="4.4" required>
+            More than 4.50 lakhs <input type="radio" name="income" id="4.6" required>
+        </p>
+    </fieldset>
+    
+    <input type="submit" value="Check for Eligibility" name="Checkeli" id="Pay Now" class="subm">
+</form>
+</div>`
+const submitBtn = document.getElementById('submit')
+const listData = document.getElementById('schema_type')
+const divForm = document.getElementById('new-form')
+
+submitBtn.addEventListener('click',()=>{
+
+    htmlData = '<p>NOT SELECTED DATA</p>'
+
+    if(listData.value === 'f1'){
+        htmlData = '<p>Form 1</p>'
+    }
+    else if(listData.value === 'Schema10'){
+        htmlData = htmlDataFrom
+    }
+    else if(listData.value === 'f3'){
+        htmlData = '<p>Form 3</p>'
+    }
+    else if(listData.value === 'f4'){
+        htmlData = '<p>Form 4</p>'
+    }
+
+    divForm.innerHTML = ''
+    divForm.insertAdjacentHTML( 'beforeend', htmlData )
+})
+
+
+</script>
+</html>

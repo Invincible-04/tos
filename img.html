@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imgi{text-orientation: upright;
+            margin-top: 200px;
+            margin-left:200px;
+            height: 500px;
+            width: 500px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        }
+        .nik{
+        position:absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left:0;
+            color: white;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background:rgba(61, 70, 77, 0.5) ;
+            z-index: 1;
+        }
+        .img-hover-zoom--slowmo  {
+            position: relative;
+        transform-origin: 50% 65%;
+        transition: transform 2s, filter 3s ease-in-out;
+        filter: brightness(150%);
+        object-fit: cover;
+        height: 500px;
+        width: 500px;
+      }
+      
+      /* The Transformation */
+      .img-hover-zoom--slowmo:hover  {
+        filter: brightness(100%);
+        transform: scale(1.5);
+      }
+    </style>
+</head>
+<body>
+    <div class="imgi">
+    <img  class="img-hover-zoom--slowmo" src="images (1).jpg" alt="">
+    <div class="nik">
+    <h3>Nirav</h3>
+</div>
+
+</div>
+</body>
+</html>

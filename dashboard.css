@@ -1,0 +1,152 @@
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 85px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000b22e3;
+    transition: 0.5s;
+    overflow-x: hidden;
+    padding-top: 15px;
+    white-space: nowrap;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 19px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  main .sidebar {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .material-icons,
+  .icon-text {
+    vertical-align: middle;
+  }
+  
+  .material-icons {
+    padding-bottom: 3px;
+    margin-right: 30px;
+  }
+  
+  #main {
+    padding: 16px;
+    margin-left: 85px;
+    transition: margin-left 0.5s;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+    .sidebar a {
+      font-size: 18px;
+    }
+  }
+
+  .main h2{color: #818181;
+    margin-top: -6px;
+    margin-left: 267px;
+  }
+.selschema {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+select{font-size: 20px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 5px;
+}
+input[type="submit"]{
+  background-color: #4267B2;
+  border: 1px solid rgb(171, 125, 125);
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 8px;
+  cursor: pointer;
+  width:100%;
+}
+
+.subm:hover{
+  background-color: #041f55;
+  color:white ;
+  
+
+}
+
+/* ---------------------form ---------------------------------------------------- */
+
+
+.container{ margin-top: 50px;
+  background-color: #f2f2f258;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+select,
+textarea{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+fieldset{
+  background-color: rgba(255, 255, 255, 0.571);
+  border: 1px solid #ccc;
+}
+
+.mainheading{
+  text-align: center;
+}
+
+.subm{
+  background-color: #845252;
+  border: 1px solid rgb(171, 125, 125);
+  color: white;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  width:100%;
+}
+
+.subm:hover{
+  background-color: #1f0c0c;
+  color:white ;
+  
+
+}
+/* ------------------------------------------------------------------------------- */
+
+  
